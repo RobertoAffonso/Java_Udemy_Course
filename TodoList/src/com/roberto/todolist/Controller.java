@@ -6,13 +6,10 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,24 +18,29 @@ import java.util.Optional;
 public class Controller
 {
     private List<TodoItem> todoItems = new ArrayList<>();
+
     @FXML
     private ListView<TodoItem> todoListView;
+
     @FXML
     private TextArea itemDetailsTextArea;
+
     @FXML
     private Label dueLabel;
+
     @FXML
     private MenuItem newReminder;
+
     @FXML
     private MenuItem exit;
+
     @FXML
     private BorderPane mainBorderPane;
 
     public void initialize()
     {
 
-//        populateTodoItems(todoItems);
-        todoListView.getItems().setAll(TodoData.getInstance().getTodoItems());
+        todoListView.setItems(TodoData.getInstance().getTodoItems());
         todoListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TodoItem>() {
             @Override
             public void changed(ObservableValue<? extends TodoItem> observable, TodoItem oldValue, TodoItem newValue)
@@ -56,36 +58,19 @@ public class Controller
         todoListView.getSelectionModel().selectFirst();
     }
 
-//    private void populateTodoItems(List<TodoItem> todoItems)
-//    {
-//        TodoItem item1 = new TodoItem("Mail birthday card", "Buy a 30th birthday card for John",
-//                LocalDate.of(2017, Month.APRIL, 25));
-//        TodoItem item2 = new TodoItem("Doctor's Appointment", "See Dr. Smith at 123 Street." +
-//                "Bring Paperwork",
-//                LocalDate.of(2017, Month.MAY, 11 ));
-//        TodoItem item3 = new TodoItem("Finish design proposal for client",
-//                "I promised Mike i'd email website proposal mockups",
-//                LocalDate.of(2017, Month.JULY, 10));
-//        TodoItem item4 = new TodoItem("Take my Cat to the vet", "Need to take my house cat for a check up",
-//                LocalDate.of(2018, Month.MARCH, 25));
-//        TodoItem item5 = new TodoItem("Return book", "Must return an overdue book to the public library",
-//                LocalDate.of(2018, Month.MARCH, 15));
-//        todoItems.add(item1);
-//        todoItems.add(item2);
-//        todoItems.add(item3);
-//        todoItems.add(item4);
-//        todoItems.add(item5);
-//        TodoData.getInstance().setTodoItems(todoItems);
-//    }
-
     public void showNewItemDialog()
     {
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.initOwner(mainBorderPane.getScene().getWindow());
+        dialog.setTitle("Insert new Todo Item.");
+        dialog.setHeaderText("Use this form to add a new item.");
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("todoItemDialog.fxml"));
+
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("todoItemDialog.fxml"));
-            dialog.getDialogPane().setContent(root);
+            dialog.getDialogPane().setContent(fxmlLoader.load());
         }
         catch (IOException ex)
         {
@@ -100,7 +85,9 @@ public class Controller
 
         if(result.isPresent() && result.get() == ButtonType.OK)
         {
-            System.out.println("OK Button pressed");
+            DialogController controller = fxmlLoader.getController();
+            TodoItem newItem = controller.processResult();
+            todoListView.getSelectionModel().select(newItem);
         }
         else
         {
