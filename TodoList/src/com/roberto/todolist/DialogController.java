@@ -13,21 +13,16 @@ import java.time.LocalDate;
  * @author Roberto Affonso, created on 21/03/18
  **/
 
-public class DialogController
-{
-    @FXML
-    private TextField descTextField;
+public class DialogController {
+    @FXML private TextField descTextField;
 
-    @FXML
-    private TextArea detailTextArea;
+    @FXML private TextArea detailTextArea;
 
-    @FXML
-    private DatePicker deadlineDatePicker;
+    @FXML private DatePicker deadlineDatePicker;
 
-    public TodoItem processResult()
-    {
+    public TodoItem processResult() {
         String description = descTextField.getText().trim();
-        String details = descTextField.getText().trim();
+        String details = detailTextArea.getText().trim();
         LocalDate date = deadlineDatePicker.getValue();
         TodoItem newItem = new TodoItem(description, details, date);
         TodoData.getInstance().addTodoItem(newItem);

@@ -9,43 +9,35 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application
-{
-    @Override
-    public void start(Stage primaryStage) throws Exception
-    {
-        Parent root = FXMLLoader.load(getClass().getResource("mainwindow.fxml"));
+public class Main
+    extends Application {
+    @Override public void start(Stage primaryStage)
+        throws Exception {
+        Parent root = FXMLLoader
+            .load(getClass().getResource("mainwindow.fxml"));
         primaryStage.setTitle("To-Do List");
         primaryStage.setScene(new Scene(root, 900, 500));
         primaryStage.show();
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         launch(args);
     }
 
-    @Override
-    public void init() throws Exception
-    {
-        try
-        {
+    @Override public void init()
+        throws Exception {
+        try {
             TodoData.getInstance().loadTodoItems();
-        }
-        catch (IOException ex)
-        {
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
 
-    @Override
-    public void stop() throws Exception
-    {
-        try
-        {
+    @Override public void stop()
+        throws Exception {
+        try {
             TodoData.getInstance().storeTodoItems();
-        }
-        catch (IOException ex)
-        {
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
