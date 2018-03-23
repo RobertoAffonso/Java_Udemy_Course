@@ -38,8 +38,7 @@ public class TodoData {
         this.todoItems = todoItems;
     }
 
-    public void loadTodoItems()
-            throws IOException {
+    public void loadTodoItems() throws IOException {
         todoItems = FXCollections.observableArrayList();
         Path path = Paths.get(filename);
         BufferedReader br = Files.newBufferedReader(path);
@@ -92,5 +91,10 @@ public class TodoData {
     public void deleteTodoItem(TodoItem item)
     {
         getTodoItems().remove(item);
+    }
+
+    public void editTodoItem(TodoItem item)
+    {
+
     }
 }

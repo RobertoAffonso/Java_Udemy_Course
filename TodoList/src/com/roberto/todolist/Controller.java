@@ -48,6 +48,8 @@ public class Controller {
 
         listContextMenu = new ContextMenu();
         MenuItem deleteMenuItem = new MenuItem("Delete");
+        MenuItem editMenuItem = new MenuItem("Edit");
+
         deleteMenuItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -55,8 +57,15 @@ public class Controller {
                 deleteItem(item);
             }
         });
+        editMenuItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                TodoItem item = todoListView.getSelectionModel().getSelectedItem();
+                editItemDialog(item);
+            }
+        });
+        listContextMenu.getItems().addAll(deleteMenuItem, editMenuItem);
 
-        listContextMenu.getItems().addAll(deleteMenuItem);
         todoListView.setItems(TodoData.getInstance().getTodoItems());
         todoListView.getSelectionModel().selectedItemProperty()
                 .addListener(new ChangeListener<TodoItem>() {
@@ -74,9 +83,9 @@ public class Controller {
                         }
                     }
                 });
-        todoListView.getSelectionModel()
-                .setSelectionMode(SelectionMode.SINGLE);
+        todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         todoListView.getSelectionModel().selectFirst();
+
         todoListView.setCellFactory(new Callback<ListView<TodoItem>, ListCell<TodoItem>>() {
             @Override
             public ListCell<TodoItem> call(ListView<TodoItem> param) {
@@ -134,6 +143,38 @@ public class Controller {
             DialogController controller = fxmlLoader.getController();
             TodoItem newItem = controller.processResult();
             todoListView.getSelectionModel().select(newItem);
+        } else {
+            System.out.println("Cancel Button pressed");
+        }
+    }
+
+    public void editItemDialog(TodoItem item) {
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.initOwner(mainBorderPane.getScene().getWindow());
+        dialog.setTitle("Edit " + item.getDescription());
+        dialog.setHeaderText("Use this form to edit the selected item");
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("todoItemDialog.fxml"));
+
+        try{
+            dialog.getDialogPane().setContent(fxmlLoader.load());
+        }catch (IOException ex) {
+            System.out.println("Error loading form");
+            ex.printStackTrace();
+            return;
+        }
+
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        DialogController controller = fxmlLoader.getController();
+        controller.updateItemFields(item);
+        Optional<ButtonType> result = dialog.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            TodoItem newItem = controller.processResult();
+            todoListView.getSelectionModel().select(newItem);
+
         } else {
             System.out.println("Cancel Button pressed");
         }

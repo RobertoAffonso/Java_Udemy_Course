@@ -16,8 +16,6 @@
             <Menu text="File">
                 <MenuItem fx:id = "newReminder" text="New Reminder" onAction="#showNewItemDialog"/>
                 <SeparatorMenuItem/>
-                <MenuItem fx:id = "editReminder" text="Edit" />
-                <SeparatorMenuItem/>
                 <MenuItem fx:id = "exit" text="Exit"/>
             </Menu>
         </MenuBar>

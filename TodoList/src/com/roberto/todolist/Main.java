@@ -10,11 +10,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main
-    extends Application {
-    @Override public void start(Stage primaryStage)
-        throws Exception {
-        Parent root = FXMLLoader
-            .load(getClass().getResource("mainwindow.fxml"));
+        extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("mainwindow.fxml"));
         primaryStage.setTitle("To-Do List");
         primaryStage.setScene(new Scene(root, 900, 500));
         primaryStage.show();
@@ -24,8 +23,8 @@ public class Main
         launch(args);
     }
 
-    @Override public void init()
-        throws Exception {
+    @Override
+    public void init() throws Exception {
         try {
             TodoData.getInstance().loadTodoItems();
         } catch (IOException ex) {
@@ -33,8 +32,8 @@ public class Main
         }
     }
 
-    @Override public void stop()
-        throws Exception {
+    @Override
+    public void stop() throws Exception {
         try {
             TodoData.getInstance().storeTodoItems();
         } catch (IOException ex) {
