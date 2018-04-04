@@ -22,5 +22,3 @@ public class Main
         System.out.println(sql);
     }
 }
-
-    UPDATE LOGUS_PORTAL_ESTAG.PLT_NOTICIA TrueNoticias SET TrueNoticias.FLG_ACTIVE = '1' WHERE TrueNoticias.IDT_NOTICIA = '2' AND  (TrueNoticias.COD_CLIENTE_CTX = '00001' and TrueNoticias.ANO_EXERCICIO_CTX = 2017)
