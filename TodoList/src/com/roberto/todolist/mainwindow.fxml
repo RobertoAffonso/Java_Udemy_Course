@@ -14,6 +14,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.control.Tooltip?>
+<<<<<<< HEAD
+=======
+<?import javafx.scene.control.ToggleButton?>
+>>>>>>> 212d624da5a8dcee0d62e55ed9fcdb1bb9a80c07
 <BorderPane fx:id="mainBorderPane" fx:controller="com.roberto.todolist.Controller"
             xmlns:fx="http://javafx.com/fxml" >
     <top>
@@ -22,12 +26,17 @@
                 <Menu text="File">
                     <MenuItem fx:id = "newReminder" text="New Reminder" onAction="#showNewItemDialog"/>
                     <SeparatorMenuItem/>
+<<<<<<< HEAD
                     <MenuItem fx:id = "exit" text="Exit"/>
+=======
+                    <MenuItem fx:id = "exit" text="Exit" onAction="#handleExit"/>
+>>>>>>> 212d624da5a8dcee0d62e55ed9fcdb1bb9a80c07
                 </Menu>
             </MenuBar>
             <ToolBar>
                 <HBox>
                     <Button onAction="#showNewItemDialog">
+<<<<<<< HEAD
                             <graphic>
                                 <ImageView>
                                     <Image url="@/toolbarButtonGraphics/general/New24.gif"/>
@@ -37,6 +46,22 @@
                                 <Tooltip text="Press to create a new Todo item"/>
                             </tooltip>
                     </Button>
+=======
+                        <tooltip>
+                            <Tooltip text="Add a new Todo item."/>
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/New24.gif"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ToggleButton fx:id="filterToggleButton" text="Today´s Items" onAction="#handleFilterButton">
+                        <tooltip>
+                            <Tooltip text="Button down: Show today´s items only. Button up: show all items"/>
+                        </tooltip>
+                    </ToggleButton>
+>>>>>>> 212d624da5a8dcee0d62e55ed9fcdb1bb9a80c07
                 </HBox>
             </ToolBar>
         </VBox>

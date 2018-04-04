@@ -12,3 +12,4 @@ Lorem Ipsum 2	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean c
 Tomorrow test	this item is due tomorrow	2018-03-23
 Take my Cat to the vet	Need to take my house cat for a check up	2018-03-26
 Admiral Bosch	Iceni	2018-03-21
+Lula Preso Amanhã	Lula vai ser preso amanhã	2018-04-03
