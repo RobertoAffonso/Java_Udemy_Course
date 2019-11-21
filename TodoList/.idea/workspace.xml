@@ -64,7 +64,6 @@
             <state relative-caret-position="136">
               <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#648#649#0" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
               </folding>
@@ -125,7 +124,7 @@
       <file leaf-file-name="TodoItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/datamodel/TodoItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="216">
               <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
                 <element signature="e#472#473#0" expanded="true" />
@@ -161,7 +160,7 @@
       <file leaf-file-name="todoItemDialog.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/todoItemDialog.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="288">
               <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding />
             </state>
@@ -478,7 +477,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14940476" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12526652" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -559,7 +558,6 @@
         <state relative-caret-position="170">
           <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
           </folding>
@@ -649,7 +647,6 @@
         <state relative-caret-position="34">
           <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
           </folding>
@@ -696,6 +693,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/layout/VBox.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/datamodel/TodoItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -717,19 +715,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="62" lean-forward="false" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
           </folding>
@@ -788,6 +779,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/layout/VBox.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/datamodel/TodoItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -809,19 +801,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
           </folding>
@@ -880,6 +865,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/layout/VBox.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/datamodel/TodoItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -901,19 +887,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="92" lean-forward="false" selection-start-line="75" selection-start-column="92" selection-end-line="75" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///opt/java/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/collections/FXCollections.java" />
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
           </folding>
@@ -1025,7 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roberto/todolist/datamodel/TodoItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="216">
           <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="e#472#473#0" expanded="true" />
@@ -1164,7 +1143,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
