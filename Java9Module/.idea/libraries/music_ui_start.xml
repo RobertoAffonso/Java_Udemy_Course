@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="music-ui-start">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/music-ui-start.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

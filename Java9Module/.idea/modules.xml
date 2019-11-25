@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java9Module.iml" filepath="$PROJECT_DIR$/Java9Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.roberto.common/com.roberto.common.iml" filepath="$PROJECT_DIR$/com.roberto.common/com.roberto.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.roberto.db/com.roberto.db.iml" filepath="$PROJECT_DIR$/com.roberto.db/com.roberto.db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.roberto.ui/com.roberto.ui.iml" filepath="$PROJECT_DIR$/com.roberto.ui/com.roberto.ui.iml" />
+    </modules>
+  </component>
+</project>
